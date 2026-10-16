@@ -23,5 +23,10 @@ public class PayrollCalculator {
 
         // Display employee name and gross pay
         System.out.printf("[Employee]: %s%n[Gross pay]: %.2f",name,grossPay);
+
+        // Overtime pay calculation
+        if (hoursWorked > 40){
+            payRate = payRate * 1.5;
+        }
     }
 }
