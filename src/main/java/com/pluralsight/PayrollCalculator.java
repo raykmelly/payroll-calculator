@@ -22,11 +22,13 @@ public class PayrollCalculator {
         double grossPay = hoursWorked * payRate;
 
         // Display employee name and gross pay
-        System.out.printf("[Employee]: %s%n[Gross pay]: %.2f",name,grossPay);
+        System.out.printf("[Employee]: %s%n[Gross pay]: %.2f%n",name,grossPay);
 
         // Overtime pay calculation
-        if (hoursWorked > 40){
-            payRate = payRate * 1.5;
+        if (hoursWorked > 40) {
+            double overtimeHours = hoursWorked - 40;
+            double overtimePay = overtimeHours * (payRate * 1.5);
+            System.out.printf("[Overtime hours]: %.2f%n[Overtime pay]: %.2f%n",overtimeHours,overtimePay);
         }
     }
 }
